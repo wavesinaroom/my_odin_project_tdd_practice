@@ -1,0 +1,4 @@
+**/node_modules
+*.json
+.babelrc
+jest.config.js
