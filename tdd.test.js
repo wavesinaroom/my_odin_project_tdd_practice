@@ -1,4 +1,5 @@
-const firstToCapital = require('./capitalize')
+const firstToCapital = require('./capitalize.mjs');
+const reverseString = require('./reverse.mjs');
 
 describe('Uppercase Tests', ()=>{
   const regex = /[A-Z]/;
@@ -14,4 +15,10 @@ describe('Uppercase Tests', ()=>{
   it('Keep first letter if is already capital', ()=>{
     expect(firstToCapital('String')).toMatch(regex);
   })
+});
+
+describe('Reverse string', ()=>{
+  it('There\'s no input', ()=>{
+    expect(reverseString).toThrowError(`Input is not defined`);
+  });
 });
