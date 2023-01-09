@@ -21,4 +21,10 @@ describe('Reverse string', ()=>{
   it('There\'s no input', ()=>{
     expect(reverseString).toThrowError(`Input is not defined`);
   });
+  it('Input must be string otherwise throw exception', ()=>{
+    expect(()=>{firstToCapital(2)}).toThrowError(`Input is not a string`);
+  });
+  it('No gaps reversed string letters match string mirrowed letter position', ()=>{
+    expect(reverseString('Inputisnotastring')).toBe(`gnirtsatonsitupnI`);
+  });
 });
