@@ -56,16 +56,16 @@ describe('Calculator', ()=>{
     it('Checks if input is actually two numbers', ()=>{
       expect(()=>{Calculator.substraction('One', 'Two')}).toThrowError(`Either input is not a number`);
     });
-    it('Adds to positive integers', ()=>{
-      expect(Calculator.substraction(5,2)).toBe(7);
+    it('Takes away two positive integers', ()=>{
+      expect(Calculator.substraction(5,2)).toBe(3);
     });
-    it('Adds a negative integer and a positive integer', ()=>{
+    it('Takes away a negative integer and a positive integer', ()=>{
       expect(Calculator.substraction(-5,2)).toBe(-3);
     });
-    it('Adds two negative integers', ()=>{
+    it('Takes away two negative integers', ()=>{
       expect(Calculator.substraction(-5,-2)).toBe(-7);
     });
-    it('Adds two floats', ()=>{
+    it('Takes away two floats', ()=>{
       expect(Calculator.substraction(2.3, 1.8)).toBe(4.1);
     });
   });  
