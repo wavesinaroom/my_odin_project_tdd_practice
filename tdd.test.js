@@ -87,5 +87,23 @@ describe('Calculator', ()=>{
       expect(Calculator.multiplication(2.3, 1.8)).toBe(4.14);
     });
   });  
+
+  describe('Division', ()=>{
+    it('Checks if input is actually two numbers', ()=>{
+      expect(()=>{Calculator.division('One', 'Two')}).toThrowError(`Either input is not a number`);
+    });
+    it('Divides two positive integers', ()=>{
+      expect(Calculator.division(6,2)).toBe(3);
+    });
+    it('Divides a negative integer and a positive integer', ()=>{
+      expect(Calculator.division(-6,2)).toBe(-3);
+    });
+    it('Divides two negative integers', ()=>{
+      expect(Calculator.division(-6,-2)).toBe(3);
+    });
+    it('Divides two floats', ()=>{
+      expect(Calculator.division(2.3, 1.8)).toBe(1.277);
+    });
+  });  
 });
 
