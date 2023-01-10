@@ -1,6 +1,6 @@
 import firstToCapital from './capitalize.js';
 import reverseString from './reverse.js';
-import sum from './calculator.js'
+import add from './calculator.js'
 
 describe('Uppercase Tests', ()=>{
   const regex = /[A-Z]/;
@@ -34,9 +34,12 @@ describe('Reverse string', ()=>{
 });
 
 describe('Calculator', ()=>{
+  it('Checks if input is actually two numbers', ()=>{
+    expect(()=>{add('One', 'Two')}).toThrowError(`Either input is not a number`);
+  });
   describe('Sum', ()=>{
     it('Adds to positive integers', ()=>{
-      expect(sum(5,2)).toBe(7);
+      expect(add(5,2)).toBe(7);
     });
   })
 });
