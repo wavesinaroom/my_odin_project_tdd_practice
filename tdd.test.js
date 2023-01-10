@@ -1,5 +1,6 @@
-const firstToCapital = require('./capitalize.mjs');
-const reverseString = require('./reverse.mjs');
+import firstToCapital from './capitalize.js';
+import reverseString from './reverse.js';
+import sum from './calculator.js'
 
 describe('Uppercase Tests', ()=>{
   const regex = /[A-Z]/;
@@ -31,3 +32,13 @@ describe('Reverse string', ()=>{
     expect(reverseString('Input is not a string.')).toBe(`.gnirts a ton si tupnI`);
   });  
 });
+
+describe('Calculator', ()=>{
+  describe('Sum', ()=>{
+    it('Adds to positive integers', ()=>{
+      expect(sum(5,2)).toBe(7);
+    });
+  })
+
+});
+
