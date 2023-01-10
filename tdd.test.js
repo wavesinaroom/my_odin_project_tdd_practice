@@ -60,7 +60,7 @@ describe('Calculator', ()=>{
       expect(Calculator.substraction(5,2)).toBe(3);
     });
     it('Takes away a negative integer and a positive integer', ()=>{
-      expect(Calculator.substraction(-5,2)).toBe(-3);
+      expect(Calculator.substraction(-5,2)).toBe(-7);
     });
     it('Takes away two negative integers', ()=>{
       expect(Calculator.substraction(-5,-2)).toBe(-7);
