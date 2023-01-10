@@ -27,4 +27,7 @@ describe('Reverse string', ()=>{
   it('No gaps reversed string letters match string mirrowed letter position', ()=>{
     expect(reverseString('Inputisnotastring')).toBe(`gnirtsatonsitupnI`);
   });
+  it('Works with gaps between words', ()=>{
+    expect(reverseString('Input is not a string.')).toBe(`.gnirts a ton si tupnI`);
+  });  
 });
