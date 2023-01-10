@@ -69,5 +69,23 @@ describe('Calculator', ()=>{
       expect(Calculator.substraction(2.3, 1.8)).toBe(0.5);
     });
   });  
+
+  describe('Multiplication', ()=>{
+    it('Checks if input is actually two numbers', ()=>{
+      expect(()=>{Calculator.multiplication('One', 'Two')}).toThrowError(`Either input is not a number`);
+    });
+    it('Multiplies two positive integers', ()=>{
+      expect(Calculator.multiplication(5,2)).toBe(10);
+    });
+    it('Multiplies a negative integer and a positive integer', ()=>{
+      expect(Calculator.multiplication(-5,2)).toBe(-10);
+    });
+    it('Multiplies two negative integers', ()=>{
+      expect(Calculator.multiplication(-5,-2)).toBe(10);
+    });
+    it('Multiplies two floats', ()=>{
+      expect(Calculator.multiplication(2.3, 1.8)).toBe(4.14);
+    });
+  });  
 });
 
