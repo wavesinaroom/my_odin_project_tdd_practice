@@ -1,6 +1,7 @@
 import firstToCapital from './capitalize.js';
 import reverseString from './reverse.js';
-import * as Calculator from './calculator.js'
+import * as Calculator from './calculator.js';
+import shiftCharacters from './caesar_cipher.js';
 
 describe('Uppercase Tests', ()=>{
   const regex = /[A-Z]/;
@@ -107,3 +108,18 @@ describe('Calculator', ()=>{
   });  
 });
 
+describe('Caesar cipher', ()=>{
+  it('There\'s no input', ()=>{
+    expect(reverseString).toThrowError(`Input is not defined`);
+  });
+  it('Input must be string otherwise throw exception', ()=>{
+    expect(()=>{firstToCapital(2)}).toThrowError(`Input is not a string`);
+  });
+  it('Shifts a letter', ()=>{
+    expect(shiftCharacters('a', 1)).toBe('b');
+  });
+  it('Shifts more than one letter', ()=>{
+    expect(shiftCharacters('abc', 2)).toBe('cde');
+  });
+
+});
