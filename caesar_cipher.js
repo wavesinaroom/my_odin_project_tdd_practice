@@ -8,8 +8,10 @@ export default function shiftCharacters(input, shift){
   let charCodes = [];
   let result = ''; 
   for(let i = 0; i<input.length; i++){
-    charCodes.push(input.charCodeAt(i)+shift);
-    result += String.fromCharCode(charCodes[i]); 
+    charCodes.push(input.charCodeAt(i));
+    if((charCodes[i]>64&&charCodes[i]<91)||(charCodes[i]>96&&charCodes[i]<123))
+      charCodes[i] += shift;
+    result+= String.fromCharCode(charCodes[i])
   }
   return result; 
 }

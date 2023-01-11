@@ -121,5 +121,7 @@ describe('Caesar cipher', ()=>{
   it('Shifts more than one letter', ()=>{
     expect(shiftCharacters('abc', 2)).toBe('cde');
   });
-
+  it('Keeps gaps in a string', ()=>{
+    expect(shiftCharacters('I am learning a lot about myself', 1)).toBe('J bn mfbsojoh b mpu bcpvu nztfmg');
+  })
 });
