@@ -2,7 +2,7 @@ import firstToCapital from './capitalize.js';
 import reverseString from './reverse.js';
 import * as Calculator from './calculator.js';
 import shiftCharacters from './caesar_cipher.js';
-import Diagnosis from './analize_array.js';
+import object from './analyze_array.js';
 
 describe('Uppercase Tests', ()=>{
   const regex = /[A-Z]/;
@@ -141,15 +141,15 @@ describe('Caesar cipher', ()=>{
 
 describe('Analyze array', ()=>{
   it('Checks average', ()=>{
-    expect(Diagnosis).toHaveProperty('average', 4);
+    expect(object).toHaveProperty('average', 4);
   });
   it('Checks min',()=>{
-    expect(Diagnosis).toHaveProperty('min', 1);
+    expect(object).toHaveProperty('min', 1);
   });
   it('Checks max', ()=>{
-    expect(Diagnosis).toHaveProperty('max',8);
+    expect(object).toHaveProperty('max',8);
   });
   it('Checks length', ()=>{
-    expect(Diagnosis).toHaveProperty('length', 6);
+    expect(object).toHaveProperty('length', 6);
   });
 });
