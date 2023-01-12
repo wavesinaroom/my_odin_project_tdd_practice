@@ -16,8 +16,8 @@ export default function shiftCharacters(input, shift){
       wrap = ((charCode-65)+shift)%26;
       if(preshift>90){
         charCode = 65 + wrap;
-      }else if(preshift<64){
-        charCode = 91 - wrap;
+      }else if(preshift<65){
+        charCode = 91 + wrap;
       }
       else{
         charCode = preshift;
@@ -29,7 +29,7 @@ export default function shiftCharacters(input, shift){
         charCode = 96 + wrap;
       }
       else if(preshift<97){
-        charCode = 123 - wrap;
+        charCode = 122 + wrap;
       }
       else{
         charCode = preshift;
