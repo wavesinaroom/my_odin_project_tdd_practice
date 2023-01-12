@@ -123,5 +123,17 @@ describe('Caesar cipher', ()=>{
   });
   it('Keeps gaps in a string', ()=>{
     expect(shiftCharacters('I am learning a lot about myself', 1)).toBe('J bn mfbsojoh b mpu bcpvu nztfmg');
-  })
+  });
+  it('Wraps char if it it\'s greater than unicode char numbers for letters', ()=>{
+    expect(shiftCharacters('xyz', 3)).toBe('abc');
+  });
+  it('Wraps uppercase char if it it\'s greater than unicode char numbers for letters', ()=>{
+    expect(shiftCharacters('XYZ', 3)).toBe('ABC');
+  });
+  it('Wraps char if it it\'s lesser than unicode char numbers for letters', ()=>{
+    expect(shiftCharacters('abc', -3)).toBe('xyz');
+  });
+  it('Wraps uppercase char if it it\'s lesser than unicode char numbers for letters', ()=>{
+    expect(shiftCharacters('ABC', -3)).toBe('XYZ');
+  });
 });
