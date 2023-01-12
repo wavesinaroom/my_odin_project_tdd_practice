@@ -2,6 +2,7 @@ import firstToCapital from './capitalize.js';
 import reverseString from './reverse.js';
 import * as Calculator from './calculator.js';
 import shiftCharacters from './caesar_cipher.js';
+import Diagnosis from './analize_array.js';
 
 describe('Uppercase Tests', ()=>{
   const regex = /[A-Z]/;

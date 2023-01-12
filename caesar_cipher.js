@@ -38,7 +38,6 @@ export default function shiftCharacters(input, shift){
 
     result+= String.fromCharCode(charCode)
   }
-  console.log(result);
   return result; 
 }
 
