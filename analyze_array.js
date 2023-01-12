@@ -5,7 +5,7 @@ function analyzeArray(array){
     average: 8,
     min: findMin(array),
     max: findMax(array),
-    length: 2
+    length: array.length 
   }
 
   function findMin(array){
@@ -25,5 +25,4 @@ function analyzeArray(array){
   }
   return obj;
 }
-console.log(object.max)
 export default object;
