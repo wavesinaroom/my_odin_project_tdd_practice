@@ -137,3 +137,18 @@ describe('Caesar cipher', ()=>{
     expect(shiftCharacters('ABC', -3)).toBe('XYZ');
   });
 });
+
+describe('Analyze array', ()=>{
+  it('Checks average', ()=>{
+    expect(Diagnosis).toHaveProperty('average', 4);
+  });
+  it('Checks min',()=>{
+    expect(Diagnosis).toHaveProperty('min', 1);
+  });
+  it('Checks max', ()=>{
+    expect(Diagnosis).toHaveProperty('max',8);
+  });
+  it('Checks length', ()=>{
+    expect(Diagnosis).toHaveProperty('length', 6);
+  });
+});
