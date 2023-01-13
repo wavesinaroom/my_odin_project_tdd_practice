@@ -2,7 +2,7 @@ const object = analyzeArray([1,8,3,4,2,6]);
 
 function analyzeArray(array){
   const obj = {
-    average: 8,
+    average: findAverage(array),
     min: findMin(array),
     max: findMax(array),
     length: array.length 
@@ -24,5 +24,14 @@ function analyzeArray(array){
     return max;
   }
   return obj;
+
+  function findAverage(array){
+    let result=0;
+    array.forEach(number=>{
+      console.log(number)
+      result+=number
+    });
+    return result/array.length;
+  }
 }
 export default object;
